@@ -1,0 +1,16 @@
+# Compiled Binaries
+*.exe
+*.out
+*.app
+*.o
+*.obj
+
+# IDE Specific (VS Code / Visual Studio)
+.vscode/
+.vs/
+bin/
+obj/
+
+# Debugging and temporary files
+*.log
+*.tmp
