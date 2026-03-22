@@ -1,28 +1,56 @@
-# Library Management System in C++
-# Project Overview:
-The Library Management System is a console-based application developed in C++ that allows admins and students to manage library resources effectively. The system enables students to access the library data by registering or logging in to their accounts. Admins have the ability to manage the books and students' accounts. The system supports adding, editing, and viewing books, as well as managing student accounts, issuing books, and handling fines.
+# University Library Management System in C++
 
-# Key Features:
-User Authentication: The system provides a login option for both admins and students, protected by a password.
+## Project Overview
+This University Learning Resource Center (LRC) Management System is a robust console-based application developed in C++ as a Performance Institutional Task (PIT). It is designed to demonstrate mastery of programming fundamentals while implementing modern data structures like structs and vectors to manage library materials, student patron accounts, and overdue fine assessments.
 
-# Admin Functions:
-  1. Add a book to the system: The admin can add new books to the library.
-  2. Edit the details of the book: The admin can edit the title and author of a book using its ISBN number.
-  3. View the status of books: The admin can view the list and availability of books in the library.
-  4. View enrolled students: The admin can view the list of students registered in the system, sorted by their roll numbers.
-  5. View student balance: The admin can view the account balance of a specific student.
+## Technical Specifications & Requirements
+This project explicitly fulfills the following CS112 core competencies:
 
-# Student Functions:
-  1. Create an account: A new student can register by providing their roll number, name, and initial deposit.
-  2. View balance: Students can view their account balance.
-  3. Deposit amount: Students can deposit money into their accounts.
-  4. Issue a book: Students can issue books from the list of available books.
+* **Elementary Programming:** Standard I/O operations and data type management.
+* **Selections:** Multi-level menu navigation using switch-case and if-else logic.
+* **Math & Strings:** Implementation of string manipulation (e.g., `.substr()`, `.length()`) for data validation, and mathematical algorithms for penalty calculations and statistical averages.
+* **Loops:** Iterative data processing and a persistent main execution loop.
+* **Functions:** Modular code architecture for high readability and maintenance.
+* **Advanced Data Structures:** Use of Structures (`struct`) for data encapsulation and Dynamic Arrays (`std::vector`) for scalable storage.
 
-Account management: The system supports up to 20 students, who pay $20 for account opening and $30 as a security deposit. Students can issue any book for $2 for a 10-day period. Fines are imposed for late returns as per the specified rules.
+## Key Features
 
-Data storage: The system uses 2D arrays to store the details of students and books. Initially, 15 books are stored in the library. Each student account contains the roll number, balance, and first name.
+### Multi-Level Authentication
+* **Admin Access:** Secured via password. Admins can manage the library catalog, view statistics, and audit sensitive student data.
+* **Student Access:** 10-digit ID-based login for personalized account and transaction management.
 
-# Implementation Details:
-The application is implemented in C++ without using classes, pointers, or structures. It employs 2D arrays, functions, loops, if-else, and switch operators to achieve the desired functionality. The main() function handles user inputs, presents options to the user, and calls appropriate functions based on the selected options. The program runs in a loop until the user decides to exit.
+### Admin Functions
+1.  **Catalog Management:** Add new titles to the library with strict alphanumeric validation (Format: `LRC-XXXXXXX`).
+2.  **Inventory Tracking:** Real-time visibility of material availability across the entire catalog.
+3.  **Member Analytics:** View all registered students sorted by their ID Number using a manual Bubble Sort algorithm.
+4.  **Audit Details:** Check specific student profiles and their current outstanding fines.
+5.  **System Statistics:** View aggregated LRC data, including active loans, total fines owed, and the average fine per student.
 
-This project is suitable for students who have completed a Programming Fundamentals course or lab and want to demonstrate their skills in C++ programming without using advanced concepts like classes or pointers. It provides a solid foundation for further learning and improvement in C++ and software development.
+### Student Functions
+1.  **Self-Registration:** Create an account requiring a strict 10-digit numeric ID.
+2.  **Account Settlement:** View current outstanding fines and process payments (includes overpayment handling to calculate change).
+3.  **Transaction System:** Borrow materials free of charge, guarded by a business rule that blocks borrowing if outstanding fines exceed P50.00.
+4.  **Smart Returns:** Automated system that calculates Overdue Penalties (P10.50/day) if the material is kept beyond the 7-day grace period.
+
+## Implementation Details
+
+### 1. Data Encapsulation
+Unlike standard 2D array implementations, this system uses `struct Student` and `struct Material`. This allows multiple data types (string, double, bool) to be bound together, simulating real-world objects and preventing integer overflow issues with 10-digit IDs.
+
+### 2. Sorting Algorithm
+The system implements a manual Bubble Sort to rank student members. This demonstrates a deep understanding of nested loops and memory swapping logic without relying on external libraries.
+
+### 3. Defensive Programming
+To ensure the system is "crash-proof" for the PIT presentation, we implemented strict Input Validation. The system clears the `cin` buffer and ignores invalid characters if a user accidentally enters a letter in a numeric field. It also forces persistent `while(true)` loops to guarantee materials and IDs are formatted correctly before being saved.
+
+## How to Compile and Run
+1.  **Compiler:** Ensure you have g++ (MinGW/MSYS2) installed.
+2.  **Navigate:** Open your terminal in the project folder.
+3.  **Compile:**
+    ```bash
+    g++ -o LibrarySystem main.cpp
+    ```
+4.  **Execute:**
+    ```bash
+    ./LibrarySystem
+    ```
