@@ -1,7 +1,7 @@
 /*
  * Project: University Library Management System
  * Course: CS112 - Computer Programming 2
- * Team: Hood Research Department
+ * Team: Hood Research Department (Alcantara, Bonggay, Epong, Sarmago)
  * Date: March 27, 2026
  * Description: A modular management system using C++ Vectors and Structs 
  * to handle material circulation and student fine assessments.
