@@ -306,7 +306,7 @@ void displayStudent(string id) {
 }
 
 /**
- * @brief Aggregates system-wide data to provide a snapshot of LRC health.
+ * @brief Aggregates system-wide data to provide a snapshot of library stock.
  * @logic Uses accumulators across multiple vectors to compile statistics.
  */
 void viewLibraryStats() {
@@ -422,7 +422,7 @@ void registerStudent() {
     s.unpaidFines = 0.00; 
     students.push_back(s);
     
-    cout << "Registration successful. Welcome to the LRC, " << s.name << "!\n";
+    cout << "Registration successful. Welcome to the USTP Library, " << s.name << "!\n";
 }
 
 /**
