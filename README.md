@@ -1,7 +1,7 @@
 # University Library Management System in C++
 
 ## Project Overview
-This University Learning Resource Center (LRC) Management System is a robust console-based application developed in C++ as a Performance Institutional Task (PIT). It is designed to demonstrate mastery of programming fundamentals while implementing modern data structures like structs and vectors to manage library materials, student patron accounts, and overdue fine assessments.
+This University Library Management System is a robust console-based application developed in C++ as a Performance Innovative Task (PIT). It is designed to demonstrate mastery of programming fundamentals while implementing modern data structures like structs and vectors to manage library materials, student patron accounts, and overdue fine assessments.
 
 ## Technical Specifications & Requirements
 This project explicitly fulfills the following CS112 core competencies:
