@@ -1,4 +1,5 @@
 # University Library Management System in C++
+Output by the Hood Research Department (Alcantara, Bonggay, Epong, Sarmago)
 
 ## Project Overview
 This University Library Management System is a robust console-based application developed in C++ as a Performance Innovative Task (PIT). It is designed to demonstrate mastery of programming fundamentals while implementing modern data structures like structs and vectors to manage library materials, student patron accounts, and overdue fine assessments.
